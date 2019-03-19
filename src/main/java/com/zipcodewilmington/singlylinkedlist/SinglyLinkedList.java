@@ -131,6 +131,35 @@ public class SinglyLinkedList {
     }
 
 
+    public void reverse(){
+        Node pointer = root;
+        Node previous = null;
+
+        while (pointer != null){
+
+          Node  current = pointer;
+            pointer = pointer.nextNode;
+
+            current.nextNode = previous;
+            previous = current;
+            root= current;
+
+        }
+       // return root;
+
+    }
+
+
+    public void print(){
+        Node node = root;
+        while(node!=null){
+            System.out.print(node.getData() + " ");
+            node = node.nextNode;
+
+        }
+        System.out.println("");
+    }
+
 
 
     private class Node {

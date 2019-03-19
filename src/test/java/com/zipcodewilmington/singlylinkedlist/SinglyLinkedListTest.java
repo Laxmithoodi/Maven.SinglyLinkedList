@@ -137,18 +137,50 @@ public class SinglyLinkedListTest {
         listexpected.add(9);
         listexpected.add(16);
 
-
+        list.print();
 
         list.sort();
-            for(int i=0; i<list.getSize();i++){
-                try {
-                    System.out.println(list.get(i));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+        list.print();
+//            for(int i=0; i<list.getSize();i++){
+//                try {
+//                    System.out.println(list.get(i));
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
 
       //Assert.assertEquals(listexpected, list.sort());
+    }
+
+
+    @Test
+    public  void testReverse(){
+
+        int inpuval = 7;
+        int val2 = 5;
+        int val3 =16;
+        int val4 = 9;
+
+        SinglyLinkedList list = new SinglyLinkedList();
+        // System.out.println(list.getSize());
+        list.add(inpuval);
+        // System.out.println(list.getSize());
+        list.add(val2);
+        list.add(val3);
+        list.add(val4);
+        // System.out.println(list.getSize());
+        list.print();
+        list.reverse();
+        list.print();
+//        for(int i=0; i<list.getSize();i++){
+//            try {
+//                System.out.println(list.get(i));
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+        //Assert.assertEquals(listexpected, list.sort());
     }
 
 }
